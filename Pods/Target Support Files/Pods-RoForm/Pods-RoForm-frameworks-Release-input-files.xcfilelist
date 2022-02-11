@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-RoForm/Pods-RoForm-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BRPickerView/BRPickerView.framework
+${BUILT_PRODUCTS_DIR}/HCSStarRatingView/HCSStarRatingView.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/QMUIKit/QMUIKit.framework
+${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

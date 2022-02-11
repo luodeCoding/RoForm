@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NEFormDemoVC.h"
 @interface AppDelegate ()
 
 @end
@@ -15,26 +15,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[NEFormDemoVC new]];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
-
-#pragma mark - UISceneSession lifecycle
-
-
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
++ (UINavigationController *)currentNavgationController {
+    // 获取当前导航控制器
+    UINavigationController *navigationControoler;
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    if ([appDelegate.window.rootViewController isKindOfClass:UITabBarController.class]) {
+        UITabBarController *rootVC = (UITabBarController *)appDelegate.window.rootViewController;
+        navigationControoler = (UINavigationController *)rootVC.selectedViewController;
+    } else {
+        navigationControoler = (UINavigationController *)appDelegate.window.rootViewController;
+    }
+    NSLog(@"当前导航控制器%@",navigationControoler);
+    return navigationControoler;
 }
-
-
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-}
-
 
 @end

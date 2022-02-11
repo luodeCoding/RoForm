@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6ZK-8t-2xa" customClass="NEImagePickAddPhotoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hKL-AO-HaJ">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8a-l5-pe2">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <color key="backgroundColor" red="0.94117385149999999" green="0.94115906949999995" blue="0.94117742780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" image="form_addPhoto"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="O8a-l5-pe2" firstAttribute="leading" secondItem="hKL-AO-HaJ" secondAttribute="leading" id="15z-wh-MIB"/>
+                    <constraint firstAttribute="trailing" secondItem="O8a-l5-pe2" secondAttribute="trailing" id="Mg7-Ha-MtF"/>
+                    <constraint firstItem="O8a-l5-pe2" firstAttribute="top" secondItem="hKL-AO-HaJ" secondAttribute="top" id="NO3-KU-vKU"/>
+                    <constraint firstAttribute="bottom" secondItem="O8a-l5-pe2" secondAttribute="bottom" id="gBS-9G-0Fn"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="8"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </collectionViewCellContentView>
+            <size key="customSize" width="114" height="101"/>
+            <connections>
+                <outlet property="addPhotoBtn" destination="O8a-l5-pe2" id="eNT-2M-46f"/>
+            </connections>
+            <point key="canvasLocation" x="120.28985507246378" y="127.56696428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="form_addPhoto" width="28" height="28"/>
+    </resources>
+</document>

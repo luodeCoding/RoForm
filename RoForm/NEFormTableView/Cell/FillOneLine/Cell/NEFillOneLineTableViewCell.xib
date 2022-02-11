@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9Hw-rE-uVO" customClass="NEFillOneLineTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Hw-rE-uVO" id="3ai-cl-CF0">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动开始时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhl-Qh-Zd3">
+                        <rect key="frame" x="25" y="13" width="92" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="说明" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y4s-QR-Ccf" customClass="QMUITextField">
+                        <rect key="frame" x="118" y="12" width="162" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uM-KP-iaV">
+                        <rect key="frame" x="280" y="11.5" width="24" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="form_necessary" translatesAutoresizingMaskIntoConstraints="NO" id="3nB-D0-jIr">
+                        <rect key="frame" x="16" y="18.5" width="7" height="7"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="y4s-QR-Ccf" firstAttribute="leading" secondItem="3ai-cl-CF0" secondAttribute="leading" constant="118" id="0P9-3H-jEY"/>
+                    <constraint firstItem="y4s-QR-Ccf" firstAttribute="centerY" secondItem="3ai-cl-CF0" secondAttribute="centerY" id="EOm-KS-Svs"/>
+                    <constraint firstItem="fhl-Qh-Zd3" firstAttribute="leading" secondItem="3nB-D0-jIr" secondAttribute="trailing" constant="2" id="QRF-uC-Qph"/>
+                    <constraint firstAttribute="trailing" secondItem="0uM-KP-iaV" secondAttribute="trailing" constant="16" id="YnF-X1-G1c"/>
+                    <constraint firstItem="3nB-D0-jIr" firstAttribute="leading" secondItem="3ai-cl-CF0" secondAttribute="leading" constant="16" id="jcH-H6-KQw"/>
+                    <constraint firstItem="3nB-D0-jIr" firstAttribute="centerY" secondItem="3ai-cl-CF0" secondAttribute="centerY" id="kMi-nW-TWR"/>
+                    <constraint firstItem="0uM-KP-iaV" firstAttribute="centerY" secondItem="3ai-cl-CF0" secondAttribute="centerY" id="kcx-Je-JqJ"/>
+                    <constraint firstItem="0uM-KP-iaV" firstAttribute="leading" secondItem="y4s-QR-Ccf" secondAttribute="trailing" id="mT7-WF-gWk"/>
+                    <constraint firstItem="fhl-Qh-Zd3" firstAttribute="centerY" secondItem="3ai-cl-CF0" secondAttribute="centerY" id="wtA-91-w2X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentTextField" destination="y4s-QR-Ccf" id="JlW-Bo-I6G"/>
+                <outlet property="necessaryImageView" destination="3nB-D0-jIr" id="Nf3-e0-Djs"/>
+                <outlet property="titleLabel" destination="fhl-Qh-Zd3" id="gs3-rJ-eYg"/>
+                <outlet property="unitLabel" destination="0uM-KP-iaV" id="ZVO-bW-ork"/>
+            </connections>
+            <point key="canvasLocation" x="173.91304347826087" y="30.803571428571427"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="form_necessary" width="7" height="7"/>
+    </resources>
+</document>
